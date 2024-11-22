@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citizen Feedback Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Citizen Feedback Portal</h1>
+    <p>Your voice matters! Share your feedback about our city services.</p>
+  </header>
 
+  <main>
+    <section id="feedback-form">
+      <h2>Submit Feedback</h2>
+      <form action="/submit-feedback" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="Roads">Roads</option>
+          <option value="Sanitation">Sanitation</option>
+          <option value="Public Safety">Public Safety</option>
+          <option value="Transportation">Transportation</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="feedback-list">
+      <h2>Feedback Received</h2>
+      <p>Feedback from citizens will appear here.</p>
+      <!-- This section can be dynamically populated by a backend script -->
+    </section>
+  </main>
+</body>
